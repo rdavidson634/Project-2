@@ -1,11 +1,11 @@
-var express = require('express');
-var router = express.Router();
+var router = require('express').Router();
 const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/trips');
 });
+
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
@@ -14,11 +14,11 @@ router.get('/auth/google', passport.authenticate(
 ));
 
 // Google OAuth callback route
-router.get('/project2callback', passport.authenticate(
+router.get('/oauth2callback', passport.authenticate(
   'google',
   {
-    successRedirect : '/users',
-    failureRedirect : '/users'
+    successRedirect : '/trips',
+    failureRedirect : '/trips'
   }
 ));
 

@@ -1,11 +1,11 @@
-var express = require('express');
 var router = require('express').Router();
-var usersCtrl = require('../controllers/users')
+var tripsCtrl = require('../controllers/trips')
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/trips', tripsCtrl.index);
+
+
+
 
 
 function isLoggedIn(req, res, next) {

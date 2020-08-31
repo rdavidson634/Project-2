@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>Trips</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="">Golf Trips</a></li>
+            <li><a href="">Add New Trip</a></li>
+            <li><a href="">Course Details</a></li>
+            
+            <li>
+                <% if (user) { %>
+                <a href="/logout" class="material-icons left">Log Out</a>
+                <% } else { %>
+                <a href="/auth/google" class="material-icons left">Login with Google</a>
+                <% } %>
+            </li>
+              
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-*-*">On deck Golf Trips</div>
+        <div class="col-*-*">Details</div>
+      </div>
+      <div class="row">
+        <div class="col-*-*"></div>
+        <div class="col-*-*"></div>
+        <div class="col-*-*"></div>
+      </div>
+    <div class="row">
+</body>
+</html>
