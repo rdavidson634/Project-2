@@ -1,8 +1,9 @@
 var router = require('express').Router();
-var tripsCtrl = require('../controllers/trips')
+var tripCtrl = require('../controllers/trips')
 
 /* GET users listing. */
-router.get('/trips', tripsCtrl.index);
+router.get('/trips', tripCtrl.index);
+router.get('/new', tripCtrl.new);
 
 
 

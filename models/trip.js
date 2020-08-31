@@ -1,27 +1,22 @@
 var mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-let userSchema = new Schema ({
+let courseSchema = new Schema ({
     name: String,
-    email: String,
-    googleId: String,
-    avatar: String
-}, {
-    timestamps: true
-});
+    address: String,
+    website: String,
+    rating: Number
+})
 
 let tripSchema = new Schema ({
     location: String,
     dates: Date,
     price: Number,
     comments: String,
-    user: [userSchema],
-    googleId: String
+    course: [courseSchema],
 }, {
     timestamps: true
 });
 
 
-
 module.exports = mongoose.model('trip', tripSchema);
-// module.exports = mongoose.model('user', userSchema);
