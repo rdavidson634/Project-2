@@ -12,7 +12,6 @@ let tripSchema = new Schema ({
     location: String,
     dates: Date,
     price: Number,
-    comments: String,
     course: [courseSchema],
 }, {
     timestamps: true

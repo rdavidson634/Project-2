@@ -26,15 +26,20 @@
     <br>
     <br>
     <br>
-    <div class="row">
-        <div class="col-*-*">On deck Golf Trips</div>
-        <div class="col-*-*">Details</div>
-      </div>
-      <div class="row">
-        <div class="col-*-*"></div>
-        <div class="col-*-*"></div>
-        <div class="col-*-*"></div>
-      </div>
-    <div class="row">
+    <table style="width: 100%">
+      <tr class="row-header">
+          <th class="col-1">On deck Golf Trips</th>
+          <th class="col-2">Details</th>
+      </tr>
+    
+        <tr class="row">
+        <% trips.forEach(function(trip) { %>
+          <td class="data-1"><%= trip.location %></td>
+          <td class="data-2"><a href="/trips/<%=trip._id%>">Trip Details</a></td>
+          <td class="col-*-*"></td>
+        </tr>
+        <% }) %>
+    </table>
+    
 </body>
 </html>
