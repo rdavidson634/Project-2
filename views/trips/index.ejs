@@ -29,14 +29,14 @@
       
         <table style="width: 100%">
           <tr class="row-header">
-              <th class="col-1">On deck Golf Trips</th>
-              <th class="col-2">Details</th>
+              <th class="">On deck Golf Trips</th>
+              <th class="">Date</th>
           </tr>
-        
+          
             <% trips.forEach(function(trip) { %>  
             <tr class="row">
-              <td class="data-1"><%= trip.location %></td>
-              <td class="data-2">Details</td>
+              <td class=""><a href="/trips/<%= trip._id %>"><%= trip.location %></a></td>
+              <td class=""><%= trip.dates %></td>
             </tr>
             <% }) %>
         </table>

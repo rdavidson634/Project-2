@@ -5,8 +5,10 @@ var tripCtrl = require('../controllers/trips')
 /* GET users listing. */
 router.get('/', tripCtrl.index);
 router.get('/new', tripCtrl.new);
-router.post('/', tripCtrl.create);
 router.get('/:id', tripCtrl.show);
+router.post('/', tripCtrl.create);
+
+
 
 
 
