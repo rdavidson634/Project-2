@@ -27,21 +27,36 @@
     <br>
     <br>
 
-    <table style="width: 100%">
+    <table style="width: 100%">     
         <tr class="row-header">
             <th class="">Courses</th>
-            <th class="">Price</th>
+        </tr>
+        
+        <tr>
+            <td class=""><%= trip.course %></td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+   
+    <table style="width: 100%">
+        <tr class="row-header">
             <th class="">Location</th>
+            <th class="">Price</th>
             <th class="">Date</th>
         </tr>
         
           
-            <tr class="row">
-              <td class=""><%= trip.course %></td>
-              <td class=""><%= trip.price %></td>
-              <td class=""><%= trip.location %></td>
-              <td class=""><%= trip.dates %></td>
-            </tr>
+        <tr class="row">
+            <td class=""><%= trip.location %></td>
+            <td class=""><%= trip.price %></td>
+            <td class=""><%= trip.dates %></td>
+        </tr>
            
       </table>
 </body>

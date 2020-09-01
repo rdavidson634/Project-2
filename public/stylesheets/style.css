@@ -50,3 +50,10 @@ li a:hover {
 td {
   text-align: center;
 }
+
+.delete-button {
+  background-color: red;
+  color: white;
+  border-radius: 100%;
+  border-color: rgb(10, 87, 10);
+}

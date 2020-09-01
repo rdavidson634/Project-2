@@ -4,9 +4,10 @@ var tripCtrl = require('../controllers/trips')
 
 /* GET users listing. */
 router.get('/', tripCtrl.index);
-router.get('/new', tripCtrl.new);
+router.get('/new', isLoggedIn, tripCtrl.new);
 router.get('/:id', tripCtrl.show);
 router.post('/', tripCtrl.create);
+router.delete('/:id', tripCtrl.delete)
 
 
 

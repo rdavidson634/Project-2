@@ -37,6 +37,11 @@
             <tr class="row">
               <td class=""><a href="/trips/<%= trip._id %>"><%= trip.location %></a></td>
               <td class=""><%= trip.dates %></td>
+              <td>  
+                <form action="/trips/<%= trip._id %>?_method=DELETE" method="POST">
+                    <button class="delete-button" type="submit">X</button>
+                </form>
+              </td>
             </tr>
             <% }) %>
         </table>

@@ -5,9 +5,9 @@ module.exports = {
     index,
     new: newTrip,
     create,
-    show
-
-  };
+    show,
+    delete: deleteTrip
+};
 
 
 function index(req, res) {
@@ -34,4 +34,10 @@ function show (req, res) {
   Trip.findById(req.params.id, function(err, trip) {
     res.render('trips/show', {trip, title: 'Details'})
   })
+}
+
+function deleteTrip (req, res) {
+  Trip.findByIdAndDelete(req.params.id, function(err) {
+    res.redirect('/trips');
+  });
 }
