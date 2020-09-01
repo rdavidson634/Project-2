@@ -33,11 +33,10 @@
               <th class="col-2">Details</th>
           </tr>
         
+            <% trips.forEach(function(trip) { %>  
             <tr class="row">
-            <% trips.forEach(function(trip) { %>
               <td class="data-1"><%= trip.location %></td>
-              <td class="data-2"><a href="/trips/<%=trip._id%>">Trip Details</a></td>
-              <td class="col-*-*"></td>
+              <td class="data-2">Details</td>
             </tr>
             <% }) %>
         </table>

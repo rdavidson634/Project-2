@@ -1,4 +1,5 @@
 const Trip = require('../models/trip');
+const User = require('../models/user');
 
 module.exports = {
     index,

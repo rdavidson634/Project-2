@@ -1,4 +1,4 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let courseSchema = new Schema ({
@@ -6,7 +6,9 @@ let courseSchema = new Schema ({
     address: String,
     website: String,
     rating: Number
-})
+}, {
+    timestamps: true
+});
 
 let tripSchema = new Schema ({
     location: String,

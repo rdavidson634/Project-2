@@ -1,9 +1,10 @@
-var router = require('express').Router();
+var express = require('express');
+var router = express.Router();
 var tripCtrl = require('../controllers/trips')
 
 /* GET users listing. */
-router.get('/trips', tripCtrl.index);
-router.get('/new', isLoggedIn, tripCtrl.new);
+router.get('/', tripCtrl.index);
+router.get('/new', tripCtrl.new);
 router.post('/', tripCtrl.create);
 router.get('/:id', tripCtrl.show);
 
