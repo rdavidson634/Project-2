@@ -1,5 +1,5 @@
 const Trip = require('../models/trip');
-const User = require('../models/user');
+
 
 module.exports = {
     index,
@@ -10,7 +10,7 @@ module.exports = {
   };
 
 
-  function index(req, res) {
+function index(req, res) {
     Trip.find({}, function(err, trips) {
         res.render('trips/index', { trips, title: 'Trips' });
     });
@@ -24,7 +24,7 @@ function create (req, res) {
   let trip = new Trip(req.body);
   trip.save(function(err) {
     if (err) {
-      return res.render('trips/new', { title: 'New Trip' });
+      return res.render('trips/new', {  });
     }
     res.redirect('/trips');
   })
