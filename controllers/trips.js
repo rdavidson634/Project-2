@@ -24,7 +24,7 @@ function create (req, res) {
   let trip = new Trip(req.body);
   trip.save(function(err) {
     if (err) {
-      return res.render('trips/new', {  });
+      return res.render('trips/new', { title: 'New Trip' });
     }
     res.redirect('/trips');
   })
