@@ -45,19 +45,17 @@ function deleteTrip (req, res) {
 }
 
 function edit (req, res) {
-  Trip.findById(req.params.id, function(trip) {
-    res.render('trips/edit', { trip })
-    })
-  }
+  res.render('trips/edit', {
+    trip: Trip.findById(req.params.id)
+  })
+}
 
 
 function update (req, res) {
-  Trip.findById(req.params.id, function(err, trip) {
-    trip.save(function(err) {
-    if (err) {
-      return res.render('/edit', {title: 'Edit Trip'})
-    }
-      res.redirect(`/trips/${trip._id}`);
-    })
-  })
+  Trip.update(req.params.id, req.body, function(trip) {
+    console.log(Trip)
+    // res.redirect(`/${trip._id}`)
+  });
+
+  
 }
