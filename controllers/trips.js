@@ -6,7 +6,9 @@ module.exports = {
     new: newTrip,
     create,
     show,
-    delete: deleteTrip
+    delete: deleteTrip,
+    edit,
+    update
 };
 
 
@@ -40,4 +42,22 @@ function deleteTrip (req, res) {
   Trip.findByIdAndDelete(req.params.id, function(err) {
     res.redirect('/trips');
   });
+}
+
+function edit (req, res) {
+  Trip.findById(req.params.id, function(trip) {
+    res.render('trips/edit', { trip })
+    })
+  }
+
+
+function update (req, res) {
+  Trip.findById(req.params.id, function(err, trip) {
+    trip.save(function(err) {
+    if (err) {
+      return res.render('/edit', {title: 'Edit Trip'})
+    }
+      res.redirect(`/trips/${trip._id}`);
+    })
+  })
 }

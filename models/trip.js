@@ -1,13 +1,19 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-
+let courseSchema = new Schema ({
+    name: String,
+    website: String,
+    rating: Number
+}, {
+    timestamps: true
+});
 
 let tripSchema = new Schema ({
     location: String,
     dates: Date,
     price: Number,
-    course: []
+    course: [courseSchema]
 }, {
     timestamps: true
 });

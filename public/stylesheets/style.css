@@ -57,3 +57,11 @@ td {
   border-radius: 100%;
   border-color: rgb(10, 87, 10);
 }
+
+.edit-trip {
+  font-size: 25px;
+}
+
+.edit-trip:hover {
+  background-color: rgb(10, 87, 10);
+}

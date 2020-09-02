@@ -1,4 +1,5 @@
 var express = require('express');
+var express = require('express');
 var router = express.Router();
 var tripCtrl = require('../controllers/trips')
 
@@ -7,7 +8,10 @@ router.get('/', tripCtrl.index);
 router.get('/new', isLoggedIn, tripCtrl.new);
 router.get('/:id', tripCtrl.show);
 router.post('/', tripCtrl.create);
-router.delete('/:id', tripCtrl.delete)
+router.delete('/:id', isLoggedIn, tripCtrl.delete);
+router.get('/:id/edit', isLoggedIn, tripCtrl.edit)
+router.put('/:id', tripCtrl.update)
+
 
 
 

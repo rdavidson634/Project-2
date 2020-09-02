@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../stylesheets/style.css">
-    <title>New Trip</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>Edit Trip</title>
 </head>
 <body>
     <nav class="navbar">
@@ -27,8 +27,8 @@
     <br>
     <br>
     <br>
-    <form action="/trips" method="POST">
-        <input name="location"><br>Location </input>
+    <form action="/trips/show" method="POST">
+        <input name="location"><br>Location</input>
         <br>
         <br>
         <label for="dates">Dates:
@@ -39,7 +39,4 @@
         <input name="price"><br>Price</input>
         <br>
         <br>
-        <button type="submit">Save</button>
-    </form>
-</body>
-</html>
+        <button type="submit">Update</button>        
