@@ -27,7 +27,8 @@
     <br>
     <br>
     <br>
-    <form action="trips/<%= trip._id %>?_method=PUT" method="POST">
+    <form action="/trips/<%= trip._id %>?_method=PUT" method="POST">
+        
         <input name="location"><br>Location</input>
         <br>
         <br>
@@ -39,4 +40,5 @@
         <input name="price"><br>Price</input>
         <br>
         <br>
-        <button type="submit">Update</button>        
+        <button type="submit">Update</button>      
+    </form>
