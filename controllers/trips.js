@@ -56,9 +56,9 @@ function update (req, res) {
   
   Trip.findById(req.params.id, function(err, trip) {
     console.log(trip)
-    let newInfo = req.body.dates
-    trip.overwrite(newInfo, function(err) {
-      res.render('trips/show', {trip})
+    
+    trip.overwrite(req.body, function(err) {
+      res.render('trips/show')
       })
     })
   }

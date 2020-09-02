@@ -2,7 +2,7 @@ const Trip = require('../models/trip');
 
 module.exports = {
     create,
-    new: newCourse
+    
 }
 
 function create(req, res) {
@@ -14,6 +14,3 @@ function create(req, res) {
     })
 }
 
-function newCourse(req, res) {
-    res.redirect('../courses/new')
-}

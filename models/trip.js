@@ -2,9 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let courseSchema = new Schema ({
-    course: {
-        type: String,
-    },
+    course: String,
     website: String,
     rating: Number
 }, {

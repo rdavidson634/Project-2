@@ -12,7 +12,6 @@
             <li><a href="/trips">Golf Trips</a></li>
             <li><a href="/trips/new">Add New Trip</a></li>
             <li><a href="">Course Details</a></li>
-            
             <li>
                 <% if (user) { %>
                 <a href="/logout" class="material-icons left">Log Out</a>
@@ -20,25 +19,53 @@
                 <a href="/auth/google" class="material-icons left">Login with Google</a>
                 <% } %>
             </li>
-              
         </ul>
     </nav>
     <br>
-    
-    <a href="../courses/new"><h3>Add Course</h3></a>
+    <h4>Add Course</h4>
     <form action="/trips/<%= trip._id %>" method="POST">
-        <input name="name"><br></input>
+        <input name="name"><br>Course Name</input>
+        <br>
+        <input name="website"><br>Website</input>
+        <br>
+        <input name="rating"><br>Rating</input>
+        <br>
+        <br>
         <button type="submit">Update</button> 
     </form>
     <br>
-    
+    <br>
+    <table style="width: 100%">
+        <tr class="course-header">
+            <th class="">Courses</th>
+            <th class="">Website</th>
+            <th class="">Rating</th>
+        </tr>
+        <% trip.course.forEach((course) => { %>
+        <tr class="row">
+            <td class=""><%= course.course %></td>
+            <td class=""><%= course.website %></td>
+            <td class=""><%= course.rating %></td>
+        </tr>
+        <% }) %>
+    </table>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <table style="width: 100%">
         <tr class="row-header">
-            <th class="">Courses</th>
+            <th class="">Location</th>
+            <th class="">Price</th>
+            <th class="">Date</th>
         </tr>
         <tr class="row">
-            <td class=""><%= trip.course%></td>
+            <td class=""><%= trip.location %></td>
+            <td class=""><%= trip.price %></td>
+            <td class=""><%= trip.dates %></td>
         </tr>
     </table>
     <br>
@@ -48,32 +75,6 @@
     <br>
     <br>
     <br>
-   
-    <table style="width: 100%">
-        
-        <tr class="row-header">
-            <th class="">Location</th>
-            <th class="">Price</th>
-            <th class="">Date</th>
-        </tr>
-        
-          
-        <tr class="row">
-            <td class=""><%= trip.location %></td>
-            <td class=""><%= trip.price %></td>
-            <td class=""><%= trip.dates %></td>
-        </tr>
-           
-      </table>
-
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-
     <a class="edit-trip" href="/trips/<%= trip._id %>/edit">Edit Trip</a>
 </body>
 </html>

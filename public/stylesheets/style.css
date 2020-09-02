@@ -65,3 +65,7 @@ td {
 .edit-trip:hover {
   background-color: rgb(10, 87, 10);
 }
+
+.course-header {
+  font-size: 18px;
+}
