@@ -48,14 +48,12 @@ function edit (req, res) {
   res.render('trips/edit', {
     trip: Trip.findById(req.params.id)
   })
+  console.log(Trip)
 }
 
 
 function update (req, res) {
-  Trip.update(req.params.id, req.body, function(trip) {
-    console.log(Trip)
-    // res.redirect(`/${trip._id}`)
+  Trip.update(req.params.id, function(err, trip) {
+    res.redirect('/id', {trip})
   });
-
-  
 }
