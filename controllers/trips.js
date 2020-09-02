@@ -53,10 +53,15 @@ function edit (req, res) {
 
 
 function update (req, res) {
-  console.log(req.params.id)
-  Trip.update(req.params.id, function(err) {
+  
+  Trip.findById(req.params.id, function(err, trip) {
+    console.log(trip)
+    let newInfo = req.body.dates
+    trip.overwrite(newInfo, function(err) {
+      res.render('trips/show', {trip})
+      })
+    })
+  }
 
-    res.redirect(`/trips/${req.params.id}`)
-  })
-};
+
 

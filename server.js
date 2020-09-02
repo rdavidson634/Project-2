@@ -22,6 +22,7 @@ require('./config/passport');
 // require routes
 var indexRouter = require('./routes/index');
 var tripsRouter = require('./routes/trips');
+var courseRouter = require('./routes/courses');
 
 
 // view engine setup
@@ -52,6 +53,7 @@ app.use(function (req, res, next) {
 
 app.use('/', indexRouter);
 app.use('/trips', tripsRouter);
+app.use('/', courseRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

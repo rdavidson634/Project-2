@@ -24,20 +24,23 @@
         </ul>
     </nav>
     <br>
+    
+    <a href="../courses/new"><h3>Add Course</h3></a>
+    <form action="/trips/<%= trip._id %>" method="POST">
+        <input name="name"><br></input>
+        <button type="submit">Update</button> 
+    </form>
     <br>
+    
     <br>
-
-    <br>
-    <br>
-    <br>
-        <table style="width: 100%">
-            <tr class="row-header">
-                <th class="">Courses</th>
-            </tr>
-            <tr class="row">
-                <td class=""><%= trip.course.name%></td>
-            </tr>
-        </table>
+    <table style="width: 100%">
+        <tr class="row-header">
+            <th class="">Courses</th>
+        </tr>
+        <tr class="row">
+            <td class=""><%= trip.course%></td>
+        </tr>
+    </table>
     <br>
     <br>
     <br>
@@ -47,6 +50,7 @@
     <br>
    
     <table style="width: 100%">
+        
         <tr class="row-header">
             <th class="">Location</th>
             <th class="">Price</th>
