@@ -26,7 +26,7 @@ function create (req, res) {
   let trip = new Trip(req.body);
   trip.userId = req.user._id;
   trip.save(function(err) {
-    if (err) return render('trips/new', { title: 'New Trip' });
+    if (err) return res.render('trips/new', { title: 'New Trip' });
     
     res.redirect('/trips');
   })
