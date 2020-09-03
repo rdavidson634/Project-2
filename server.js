@@ -51,6 +51,11 @@ app.use(function (req, res, next) {
   next();
 });
 
+app.use(function (req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 app.use('/', indexRouter);
 app.use('/trips', tripsRouter);
 app.use('/', courseRouter)
