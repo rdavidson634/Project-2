@@ -1,18 +1,24 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: rgb(209, 225, 240);
   position: relative;
   text-align: center;
+  background: url('../images/golf-bags.jpg');
+  background-size: cover;
+  
 }
 
 table {
   float: left;
+  background-color: rgb(188, 245, 171);
 }
 
-form {
-  
+main, tr, th {
+  border: 1px solid rgb(10, 87, 10);
 }
+
 
 ul {
     list-style-type: none;
@@ -43,12 +49,17 @@ li a:hover {
 
 .row-header {
   
-  font: 25px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: black;
   
+}
+th {
+  font-weight: 1000;
 }
 
 td {
   text-align: center;
+  font-style: italic;
 }
 
 .delete-button {
@@ -59,13 +70,37 @@ td {
 }
 
 .edit-trip {
-  font-size: 25px;
+  font-size: 22px;
+
 }
 
 .edit-trip:hover {
   background-color: rgb(10, 87, 10);
 }
 
+.edit-trip:visited {
+  color: white;
+}
+
+.edit-trip:link {
+  color: white;
+}
+
 .course-header {
   font-size: 18px;
 }
+
+form {
+  font-weight: bold;
+}
+
+.instructions {
+  color: black;
+  position: relative;
+  top: 100px;
+}
+
+.instructions p {
+  font-weight: bold;
+}
+
