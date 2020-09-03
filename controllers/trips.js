@@ -46,7 +46,7 @@ function deleteTrip (req, res) {
 
 function edit (req, res) {
   Trip.findById(req.params.id, function(err, trip) {
-    console.log(trip)
+    // console.log(trip)
     res.render('trips/edit', {trip})
   })
 }
@@ -54,14 +54,12 @@ function edit (req, res) {
 
 function update (req, res) {
   
-  Trip.findById(req.params.id, function(err, trip) {
+  Trip.findByIdAndUpdate(req.params.id, req.body, function(err, trip) {
     console.log(trip)
-    
-    trip.overwrite(req.body, function(err) {
-      res.render('trips/show')
-      })
+    res.render('trips/show', {trip})
     })
   }
+  
 
 
 
