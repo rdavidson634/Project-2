@@ -40,6 +40,7 @@ function show (req, res) {
 
 function deleteTrip (req, res) {
   Trip.findByIdAndDelete(req.params.id, function(err) {
+    
     res.redirect('/trips');
   });
 }
@@ -55,7 +56,9 @@ function edit (req, res) {
 
 function update (req, res) {
   Trip.findByIdAndUpdate(req.params.id, req.body, function(err, trip) {
-    res.render('trips/show', {trip})
+    trip.save(function(err) {
+      res.render('trips/show', {trip})
+      })
     })
   }
   

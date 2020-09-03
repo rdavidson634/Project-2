@@ -25,5 +25,6 @@ Next Steps:
 - connect to golf course API
 - fix update function so user doesn't have to refresh the page
 - style more 
-- 
+- fix models so that certain things like commas work for the users
+- add delete and edit for courses
 
