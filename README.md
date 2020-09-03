@@ -1,5 +1,3 @@
 Golfcation
 
-<a href="//imgur.com/a/ibnfgvB"></a>
-
-
+<a href="https://imgur.com/a/ibnfgvB"><img src="https://imgur.com/a/ibnfgvB.png" title="source: imgur.com" /></a>
