@@ -24,6 +24,7 @@ function newTrip (req, res) {
 
 function create (req, res) {
   let trip = new Trip(req.body);
+  
   trip.save(function(err) {
     if (err) {
       return res.render('trips/new', { title: 'New Trip' });
@@ -39,7 +40,8 @@ function show (req, res) {
 }
 
 function deleteTrip (req, res) {
-  Trip.findByIdAndDelete(req.params.id, function(err) {
+  Trip.findByIdAndDelete(req.params.id, function(err, trip) {
+    if (trip.user !== req.user._id) return res.redirect('/trips');
     res.redirect('/trips');
   });
 }
