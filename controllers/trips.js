@@ -24,11 +24,10 @@ function newTrip (req, res) {
 
 function create (req, res) {
   let trip = new Trip(req.body);
-  
+  trip.userId = req.user._id;
   trip.save(function(err) {
-    if (err) {
-      return res.render('trips/new', { title: 'New Trip' });
-    }
+    if (err) return render('trips/new', { title: 'New Trip' });
+    
     res.redirect('/trips');
   })
 }
@@ -48,15 +47,14 @@ function deleteTrip (req, res) {
 function edit (req, res) {
   Trip.findById(req.params.id, function(err, trip) {
     // console.log(trip)
+    if (!trip.userId.equals(req.user._id)) return res.redirect('/trips');
     res.render('trips/edit', {trip})
   })
 }
 
 
 function update (req, res) {
-  
   Trip.findByIdAndUpdate(req.params.id, req.body, function(err, trip) {
-    console.log(trip)
     res.render('trips/show', {trip})
     })
   }
