@@ -10,7 +10,7 @@ let courseSchema = new Schema ({
 });
 
 let tripSchema = new Schema ({
-    user: {type: Schema.Types.ObjectId, ref: 'user'},
+    userId: {type: Schema.Types.ObjectId, ref: 'user'},
     location: String,
     dates: Date,
     price: Number,
