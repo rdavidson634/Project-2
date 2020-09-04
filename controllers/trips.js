@@ -39,8 +39,8 @@ function show (req, res) {
 }
 
 function deleteTrip (req, res) {
-  Trip.findByIdAndDelete(req.params.id, function(err) {
-    
+  Trip.findByIdAndDelete(req.params.id, function(err) { 
+    if (!trip.userId.equals(req.user._id)) return res.redirect('/trips');
     res.redirect('/trips');
   });
 }

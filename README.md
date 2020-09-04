@@ -17,6 +17,8 @@ Technologies:
 
 Link:
 https://golfcation.herokuapp.com/
+https://trello.com/b/B8Z7sFS6/golfcation
+
 
 Next Steps:
 - Restrict what can be entered as data with regEx
@@ -27,4 +29,5 @@ Next Steps:
 - style more 
 - fix models so that certain things like commas work for the users
 - add delete and edit for courses
+
 
