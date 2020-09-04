@@ -2,6 +2,8 @@ Golfcation
 
 [Imgur](https://imgur.com/G0IJlAA)
 
+<img src="https://imgur.com/G0IJlAA.png"/>
+
 Technologies:
 - HTML
 - CSS
