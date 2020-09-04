@@ -1,6 +1,6 @@
 Golfcation
 
-<img src="https://imgur.com/G0IJlAA" />
+[Imgur](https://imgur.com/G0IJlAA)
 
 Technologies:
 - HTML
